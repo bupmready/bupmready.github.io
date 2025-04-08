@@ -2,4 +2,207 @@
 layout: default
 title: Home
 ---
-<!-- Your home page content goes here -->
+
+<!-- Hero Section with Full Screen Background -->
+<section class="hero full-screen" style="background-image: url('/assets/images/hero-background.jpg');">
+    <div class="container">
+        <div class="hero-content animate-in">
+            <h1>Boston University PMReady</h1>
+            <p class="hero-subtitle"><em>Transforming students into product managers one workshop at a time!</em></p>
+            <div class="hero-buttons">
+                <a href="{{ '/signup/' | relative_url }}" class="btn btn-primary">Join Us</a>
+                <a href="{{ '/programs/' | relative_url }}" class="btn btn-secondary">Explore Programs</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about-section">
+    <div class="container">
+        <h2>What is PMReady?</h2>
+        <div class="about-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed
+                erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim.
+                Phasellus molestie magna non est bibendum non venenatis nisl tempor.</p>
+
+            <p>Suspendisse in orci enim. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus
+                rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non
+                venenatis nisl tempor.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Alumni Success Section -->
+<section class="alumni-success">
+    <div class="container">
+        <h2>Where Our Members Work</h2>
+        <p class="section-subtitle">Our alumni have secured internships and full-time positions at top companies</p>
+
+        <div class="company-logos">
+            <!-- Replace with actual company logos -->
+            <div class="logo-item">
+                <img src="/assets/images/logos/company1.png" alt="Company 1">
+            </div>
+            <div class="logo-item">
+                <img src="/assets/images/logos/company2.png" alt="Company 2">
+            </div>
+            <div class="logo-item">
+                <img src="/assets/images/logos/company3.png" alt="Company 3">
+            </div>
+            <div class="logo-item">
+                <img src="/assets/images/logos/company4.png" alt="Company 4">
+            </div>
+            <div class="logo-item">
+                <img src="/assets/images/logos/company5.png" alt="Company 5">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Programs Preview Section -->
+<section class="programs-preview">
+    <div class="container">
+        <h2>Our Programs</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">Workshops</h3>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.
+                    </p>
+                    <a href="{{ '/programs/workshops/' | relative_url }}" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">Events</h3>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.
+                    </p>
+                    <a href="{{ '/programs/events/' | relative_url }}" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">Impact Internship</h3>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.
+                    </p>
+                    <a href="{{ '/programs/impact-internship/' | relative_url }}" class="btn btn-secondary">Learn
+                        More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Additional CSS for this page only -->
+<style>
+    /* Full screen hero section */
+    .full-screen {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+
+    .full-screen::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Dark overlay for better text visibility */
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 10;
+        max-width: 800px;
+    }
+
+    .hero h1 {
+        color: white;
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-subtitle {
+        color: white;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    /* About section styling */
+    .about-section {
+        padding: 5rem 0;
+        background-color: white;
+    }
+
+    /* Company logos section */
+    .alumni-success {
+        padding: 5rem 0;
+        background-color: #f8f9fa;
+    }
+
+    .section-subtitle {
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto 3rem;
+    }
+
+    .company-logos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    .logo-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+        width: 180px;
+        padding: 1rem;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+    }
+
+    .logo-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo-item img {
+        max-width: 100%;
+        max-height: 100%;
+        filter: grayscale(100%);
+        opacity: 0.7;
+        transition: all 0.3s ease;
+    }
+
+    .logo-item:hover img {
+        filter: grayscale(0%);
+        opacity: 1;
+    }
+
+    /* Programs preview section */
+    .programs-preview {
+        padding: 5rem 0;
+        background-color: white;
+    }
+</style>

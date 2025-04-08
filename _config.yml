@@ -25,8 +25,8 @@ navigation:
     url: /
   - title: About
     url: /about/
-  - title: Members
-    url: /members/
+  - title: Board
+    url: /board/
   - title: Programs
     url: /programs/
     subitems:
@@ -34,8 +34,8 @@ navigation:
         url: /programs/workshops/
       - title: Events
         url: /programs/events/
-      - title: Pitch Day
-        url: /programs/pitch-day/
+      - title: Impact Internship
+        url: /programs/impact-internship/
   - title: Sponsors
     url: /sponsors/
   - title: Sign Up

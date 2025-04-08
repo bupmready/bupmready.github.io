@@ -1,0 +1,35 @@
+<header class="site-header">
+  <div class="container">
+    <a href="{{ '/' | relative_url }}" class="site-logo">
+      <img src="{{ '/assets/logos/colored_text_logo.svg' | relative_url }}" alt="{{ site.title }}">
+    </a>
+
+    <nav class="site-nav">
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-menu">
+        {% for item in site.navigation %}
+        {% if item.subitems %}
+        <li class="dropdown">
+          <a href="{{ item.url | relative_url }}" class="dropdown-toggle">
+            {{ item.title }} <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            {% for subitem in item.subitems %}
+            <li><a href="{{ subitem.url | relative_url }}">{{ subitem.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </li>
+        {% else %}
+        <li><a href="{{ item.url | relative_url }}" {% if page.url==item.url %}class="active" {% endif %}>{{ item.title
+            }}</a></li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>
